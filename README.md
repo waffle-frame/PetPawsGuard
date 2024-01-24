@@ -1,14 +1,21 @@
-# Clean Architecture
+# Pet Paws Guard
 
 <img src="/ref/logo.png" align="right" width="210">
 
-> Implementation of clean architecture based on Uncle Bob's book
+> Pet project for implementation of authorization gRPC service
 
-[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/waffle-frame/clean-architecture-template)](https://github.com/gomods/athens) ![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https://raw.githubusercontent.com/waffle-frame/clean-architecture-template/master/pkg/docs/swagger.yaml) [![wakatime](https://wakatime.com/badge/user/ec493241-c2a0-40a9-8ff1-637bdb54b2f1/project/d9c08ded-4928-49a3-8921-49aa3087f700.svg)](https://wakatime.com/badge/user/ec493241-c2a0-40a9-8ff1-637bdb54b2f1/project/d9c08ded-4928-49a3-8921-49aa3087f700)
 
-Clean Architecture was proposed by Robert Martin (also known as Uncle Bob) in his book "Clean Architecture: A Craftsman's Guide to Software Structure and Design" published in 2017. The goal of Clean Architecture is to create a flexible, extensible and easily maintainable software architecture.
+[![GitHub go.mod Go version of a Go
+module](https://img.shields.io/github/go-mod/go-version/waffle-frame/PetPawsGuard)](https://github.com/gomods/athens)
+[![wakatime](https://wakatime.com/badge/user/ec493241-c2a0-40a9-8ff1-637bdb54b2f1/project/018d35f3-8797-4caa-bcfa-2bcac96acca2.svg)](https://wakatime.com/badge/user/ec493241-c2a0-40a9-8ff1-637bdb54b2f1/project/018d35f3-8797-4caa-bcfa-2bcac96acca2)
 
-The main idea of Clean Architecture is to divide the program into layers, where each layer has its own responsibility and depends only on the layers below. This makes it easy to change or replace components within each layer without affecting the rest of the system.
+The project provides for the implementation of **gRPC** authorization in the future. Golang programming. This service is intended for the presentation and demonstration of vozmoznostei gRPC in the context of authentication and authorization by police
+
+The main functionality of the project includes:
+
+   1. Creation and management of users: registration, authentication, authorization password change and other operations
+   2. Using the gRPC protocol for data exchange between client and server
+   3. Working with access tokens and ensuring data security
 
 ---
 
@@ -16,26 +23,23 @@ The main idea of Clean Architecture is to divide the program into layers, where 
 
 <!-- code_chunk_output -->
 
-- [Clean Architecture](#clean-architecture)
-  - [Project Navigation](#project-navigation)
-  - [Installation](#installation)
-    - [Step 1. Check dependencies](#step-1-check-dependencies)
-    - [Step 2. Setting up the environment](#step-2-setting-up-the-environment)
-      - [2.1 Database creation](#21-database-creation)
-      - [2.2 Сonfiguration file setup](#22-сonfiguration-file-setup)
-      - [2.3 Swagger setup (Option)](#23-swagger-setup-option)
-    - [Step 3. Run](#step-3-run)
-  - [TODO](#todo)
+1. [Pet Paws Guard](#pet-paws-guard)
+   1. [Project Navigation](#project-navigation)
+   2. [Installation](#installation)
+      1. [Step 1. Check dependencies](#step-1-check-dependencies)
+      2. [Step 2. Setting up the environment](#step-2-setting-up-the-environment)
+         1. [2.1 Database creation](#21-database-creation)
+         2. [2.2 Сonfiguration file setup](#22-сonfiguration-file-setup)
+         3. [2.3 Swagger setup (Option)](#23-swagger-setup-option)
+   3. [Run](#run)
 
 <!-- /code_chunk_output -->
 
 ## Project Navigation
 
-| Name            | Link                      |
-| --------------- | ------------------------- |
-| Database schema | <http://link.com>        |
-| Design          | <http://figma.com>       |
-| Technical task  | <http://docs.google.com> |
+| Name           | Link                     |
+| -------------- | ------------------------ |
+| Source Docs    | <https://grpc.io/>       |
 
 ## Installation
 
@@ -75,7 +79,7 @@ In this example I accessed the docker image and got the keycloak version
 #### 2.1 Database creation
 
 ```bash
-sudo -u postgres psql -c 'CREATE DATABASE clean_arch;'
+sudo -u postgres psql -c 'CREATE DATABASE pet_paws_guard;'
 ```
 
 #### 2.2 Сonfiguration file setup
@@ -102,7 +106,7 @@ To apply the changes, you need to run the command:
 make docs
 ```
 
-### Step 3. Run
+## Run
 
 To run in development mode, use the command:
 
@@ -122,9 +126,3 @@ make build
 > The binary file will be located on the path ./build/app
 
 ---
-
-## TODO
-
-- [ ] Implement CI/CD
-- [ ] Add information to other readme files
-- [ ] Сreate a project that will have an example of using this blog-based template

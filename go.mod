@@ -1,6 +1,6 @@
 module github.com/waffle-frame/clean-architecture-template
 
-go 1.19
+go 1.21
 
 require (
 	github.com/go-openapi/runtime v0.26.0
